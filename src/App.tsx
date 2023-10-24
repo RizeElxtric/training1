@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './dashboard/dashboard.css';
+import Dashboard from './dashboard/dashboard'
+import './juice/juice.css'
+import Juice from './juice/juice';
+import './vape/vape.css'
+import Vape from './vape/vape';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Routes>
+        <Route path="/" element={<Dashboard />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/juice" element={<Juice />} />
+          <Route path="/vape" element={<Vape />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
+
 
 export default App;
