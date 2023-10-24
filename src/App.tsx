@@ -9,8 +9,14 @@ import Vape from './vape/vape';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './Login/Login';
 import Register from './Register/register';
+
 import ForgotPassword from './forgotpassword/forgotpassword';
 import './about-us/about-us.css'
+
+import './Login/Login.css';
+import './Register/register.css';
+import './Forgotpassword/forgotpassword.css';
+
 
 function App() {
   return (

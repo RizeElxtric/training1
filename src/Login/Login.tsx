@@ -18,7 +18,9 @@ const Login: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="center-content">
+          <div className="login-form">
+
       <h2>Login</h2>
       <input
         type="text"
@@ -37,6 +39,8 @@ const Login: React.FC = () => {
       <button onClick={() => navigate('/register')}>Register</button>
       <button onClick={() => navigate('/forgotpassword')}>Forgot Password</button>
     </div>
+    </div>
+
   );
 };
 
