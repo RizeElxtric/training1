@@ -9,7 +9,7 @@ const Juice = () => {
           <li className="menu-item"><Link to="/dashboard">Home</Link></li>
           <li className="menu-item"><Link to="/juice">Juice</Link></li>
           <li className="menu-item"><Link to="/vape">Vape</Link></li>
-          <li className="menu-item">About</li>
+          <li className="menu-item"><Link to="/about-us">About us</Link></li>
         </ul>
       </div>
 

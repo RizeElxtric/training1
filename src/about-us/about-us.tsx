@@ -1,9 +1,12 @@
 import React from 'react';
+import Footer from './footer';
+import Body from './body';
 import { Link } from 'react-router-dom';
 
-const Dashboard = () => {
+
+function AboutUs() {
   return (
-    <div className="container">
+<div className="container">
       <div className="sidebar">
         <ul className="menu">
           <li className="menu-item"><Link to="/dashboard">Home</Link></li>
@@ -27,35 +30,18 @@ const Dashboard = () => {
           </div>
 
           <div className="user-box">
-            <button className="button"><Link to="/login"></Link></button>
+            <button className="button">Login</button>
           </div>
         </header>
 
-        <div className="product-grid">
-          <div className="product">
-            <img src="juice1.jpg" alt="Product 1" />
-            <h3>Product 1</h3>
-            <p>Description of Product 1</p>
-            <button>Add to Cart</button>
-          </div>
-
-          <div className="product">
-            <img src="product2.png" alt="Product 2" />
-            <h3>Product 2</h3>
-            <p>Description of Product 2</p>
-            <button>Add to Cart</button>
-          </div>
-
-          <div className="product">
-            <img src="product3.png" alt="Product 3" />
-            <h3>Product 3</h3>
-            <p>Description of Product 3</p>
-            <button>Add to Cart</button>
-          </div>
-        </div>
+        <div>
+      <Body />
+      <Footer />
+    </div>
       </div>
     </div>
-  );
-};
 
-export default Dashboard;
+  );
+}
+
+export default AboutUs;
