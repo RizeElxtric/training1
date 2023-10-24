@@ -27,7 +27,7 @@ const Juice = () => {
           </div>
 
           <div className="user-box">
-            <button className="button">User</button>
+            <button className="button">Login</button>
           </div>
 
         </header>
