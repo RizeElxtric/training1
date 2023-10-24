@@ -25,7 +25,8 @@ const Register: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="center-content">
+          <div className="register-form">
       <h2>Register</h2>
       <input
         type="text"
@@ -67,6 +68,8 @@ const Register: React.FC = () => {
       <p style={{ color: 'red' }}>{error}</p>
       <button onClick={() => navigate('/login')}>Back to Login</button>
     </div>
+    </div>
+
   );
 };
 

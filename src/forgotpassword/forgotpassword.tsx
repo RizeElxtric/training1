@@ -23,7 +23,9 @@ const ForgotPassword: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="center-content">
+        <div className="forgot-password-form">
+
       <h2>Forgot Password</h2>
       {passwordChanged ? (
         <div>
@@ -49,6 +51,8 @@ const ForgotPassword: React.FC = () => {
         </div>
       )}
     </div>
+    </div>
+
   );
 };
 
