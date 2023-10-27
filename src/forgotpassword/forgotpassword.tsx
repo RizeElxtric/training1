@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const ForgotPassword: React.FC = () => {
-  const [email, setEmail] = useState('');
+  const [email, setUsername] = useState('');
   const [newPassword, setNewPassword] = useState('');
   const [error, setError] = useState('');
   const [passwordChanged, setPasswordChanged] = useState(false);
@@ -34,10 +34,10 @@ const ForgotPassword: React.FC = () => {
       ) : (
         <div>
           <input
-            type="email"
-            placeholder="Email"
+            type="username"
+            placeholder="Username"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => setUsername(e.target.value)}
           />
           <input
             type="password"
