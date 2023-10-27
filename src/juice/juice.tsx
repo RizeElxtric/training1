@@ -51,7 +51,7 @@ const Juice = () => {
           </div>
         </header>
 
-        <div className="product-grid">
+      <div className="product-grid">
         {products.map((product) => (
           <div className="product" key={product.id}>
             <img src={product.image} alt={product.name} />

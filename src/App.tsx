@@ -9,7 +9,11 @@ import Vape from './vape/vape';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './Login/Login';
 import Register from './Register/register';
+
 import ProductDetail from './product-detail/product-detail';
+
+
+
 import ForgotPassword from './forgotpassword/forgotpassword';
 import './about-us/about-us.css'
 
@@ -31,7 +35,6 @@ function App() {
           <Route path='/login' element={<Login />}></Route>
           <Route path='/register' element={<Register />}></Route>
           <Route path='/forgotpassword' element= {<ForgotPassword />}></Route>
-          <Route path="/product/:productName" element={<ProductDetail />} />
           <Route path="/product/:productName" element={<ProductDetail />} />
           <Route path="/about-us" element={<AboutUs />} />
         </Routes>

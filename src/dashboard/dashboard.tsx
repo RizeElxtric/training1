@@ -55,7 +55,6 @@ const Dashboard = () => {
       <div className="content">
         <header className="header">
           <img src="logo.png" alt="Logo" className="logo" />
-
           <div className="search-box">
             <input type="text" placeholder="Search" className="search" />
             <button className="button">Search</button>
@@ -66,22 +65,22 @@ const Dashboard = () => {
           </div>
 
           <div className="user-box">
-            <button className="button"><Link to="/login">Login</Link></button>
+            <button className="button"><Link to="/login"></Link></button>
           </div>
         </header>
 
         <div className="product-grid">
-          {products.map((product) => (
-            <div className="product" key={product.id}>
-              <img src={product.image} alt={product.name} />
-              <Link to={`/product/${product.name}`}>
-                <h3>{product.name}</h3>
-              </Link>
-              <p>{product.description}</p>
-                <button>Add to Cart</button>
-            </div>
-          ))}
-        </div>
+        {products.map((product) => (
+          <div className="product" key={product.id}>
+            <img src={product.image} alt={product.name} />
+            <Link to={`/product/${product.name}`}>
+              <h3>{product.name}</h3>
+            </Link>
+            <p>{product.description}</p>
+            <button>Add to Cart</button>
+          </div>
+        ))}
+      </div>
       </div>
     </div>
   );

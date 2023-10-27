@@ -9,37 +9,40 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Styles for the sidebar */
+/* Styling for the sidebar */
 .sidebar {
-  width: 200px;
-  background-color: #24ce7c;
-  color: #fff;
-  padding: 20px;
-  min-height: 100vh;
-  position: sticky;
-  top: 0;
+  width: 250px; /* Adjust the width to your preference */
+  background-color: #333; /* Sidebar background color */
+  color: #fff; /* Text color */
+  padding: 20px; /* Add padding to create some spacing */
+
+  /* You can also add a box shadow for a subtle elevation effect */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
 }
 
+/* Styling for the menu items */
 .menu {
-  list-style: none;
+  list-style: none; /* Remove list bullets */
   padding: 0;
 }
 
-/* Styles for the menu items in the sidebar */
 .menu-item {
-  margin-bottom: 15px;
-  font-size: 20px; /* Increased font size */
-  padding: 10px 20px; /* Increased padding */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer;
-  transition: background-color 0.3s ease; /* Smooth hover effect */
+  margin-bottom: 10px; /* Add some spacing between menu items */
 }
 
-.menu-item:hover {
-  background-color: #007bff; /* Change background color on hover */
-  text-decoration: none;
-  color: #fff; /* Change text color on hover */
+/* Styling for the links */
+.menu-item a {
+  text-decoration: none; /* Remove underline from links */
+  color: #fff; /* Link text color */
+  font-size: 16px; /* Adjust the font size */
+  transition: color 0.3s; /* Add a smooth color transition on hover */
+
+  /* Change link color on hover */
+  &:hover {
+    color: #00a0e5; /* Change to a different color on hover */
+  }
 }
+
 
 
 /* Styles for the content area */
@@ -48,41 +51,59 @@
   padding: 20px;
 }
 
-/* Header styles */
+/* Styling for the header */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
-  padding: 15px;
-  border-bottom: 1px solid #ddd;
-  border-radius: 5px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+/* Styling for the logo */
 .logo {
-  width: 100px;
+  max-width: 100px; /* Adjust the maximum logo width as needed */
+  height: auto;
 }
 
+/* Styling for the search box */
 .search-box {
   display: flex;
-  align-items: center;
+  align-items: center; /* Vertically center items */
 }
 
 .search {
-  padding: 10px;
-  border: 1px solid #ccc;
+  flex: 1; /* Allow the input to take up remaining space */
+  border: none;
   border-radius: 5px;
-  font-size: 16px;
   margin-right: 10px;
+  font-size: 14px;
 }
 
 .button {
-  background-color: #007bff;
-  color: #fff;
+  background-color: #00a0e5; /* Button background color */
+  color: #fff; /* Button text color */
   border: none;
   border-radius: 5px;
-  padding: 10px 20px;
+  padding: 5px 15px;
+  cursor: pointer;
+  font-size: 14px;
 }
+
+/* Styling for the Shopping Cart button */
+.shopping-cart .button {
+  background-color: #ff9933; /* Change color as per your design */
+}
+
+/* Styling for the user box (Login button) */
+.user-box .button {
+  background-color: #33cc33; /* Change color as per your design */
+  text-decoration: none; /* Remove the default link underline */
+  color: #fff; /* Button text color */
+}
+
 
 .button:hover {
   cursor: pointer;
