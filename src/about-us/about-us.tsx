@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 function AboutUs() {
   return (
-<div className="container">
+    <div className="container">
       <div className="sidebar">
         <ul className="menu">
           <li className="menu-item"><Link to="/dashboard">Home</Link></li>
@@ -26,18 +26,18 @@ function AboutUs() {
           </div>
 
           <div className="shopping-cart">
-            <button className="button">Shopping Cart</button>
+            <Link to="/shoppingCart"><button className="button">Shopping Cart</button></Link>
           </div>
 
           <div className="user-box">
-          <Link to="/login"><button className="button">Login </button></Link>
+            <Link to="/login"><button className="button">Login </button></Link>
           </div>
         </header>
 
         <div>
-      <Body />
-      <Footer />
-    </div>
+          <Body />
+          <Footer />
+        </div>
       </div>
     </div>
 
