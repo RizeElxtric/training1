@@ -26,7 +26,7 @@ const Dashboard = () => {
           </div>
 
           <div className="user-box">
-            <button className="button">User</button>
+            <button className="button"><Link to="/login">Login</Link></button>
           </div>
         </header>
 
