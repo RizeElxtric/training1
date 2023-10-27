@@ -65,7 +65,7 @@ const Dashboard = () => {
           </div>
 
           <div className="user-box">
-            <button className="button"><Link to="/login"></Link></button>
+          <Link to="/login"><button className="button">Login</button></Link>
           </div>
         </header>
 

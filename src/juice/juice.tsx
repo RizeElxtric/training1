@@ -28,7 +28,7 @@ const Juice = () => {
         <ul className="menu">
           <li className="menu-item"><Link to="/dashboard">Home</Link></li>
           <li className="menu-item"><Link to="/juice">Juice</Link></li>
-          <li className="menu-item"><Link to="/vape">Juice</Link></li>
+          <li className="menu-item"><Link to="/vape">Vape</Link></li>
           <li className="menu-item"><Link to="/about-us">About</Link></li>
         </ul>
       </div>
@@ -47,7 +47,7 @@ const Juice = () => {
           </div>
 
           <div className="user-box">
-            <button className="button"><Link to="/login">Login</Link></button>
+          <Link to="/login"><button className="button">Login</button></Link>
           </div>
         </header>
 
