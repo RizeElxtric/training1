@@ -69,7 +69,7 @@ const ProductDetail = () => {
           </div>
 
           <div className="shopping-cart">
-            <button className="button">Shopping Cart</button>
+          <Link to="/shoppingCart"><button className="button">Shopping Cart</button></Link>
           </div>
 
           <div className="user-box">
