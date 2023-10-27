@@ -1,0 +1,31 @@
+.shopping-cart {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .product-list {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .product {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .cart {
+    flex: 1;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }

@@ -9,17 +9,16 @@ import Vape from './vape/vape';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './Login/Login';
 import Register from './Register/register';
-
-import ProductDetail from './product-detail/product-detail';
-
-
-
+import Checkout from './cart/checkout';
+import ShoppingCart from './cart/shoppingCart';
+import './App.css';
 import ForgotPassword from './forgotpassword/forgotpassword';
 import './about-us/about-us.css'
-
+import './cart/shoppingCart.css'
+import './cart/checkout.css'
 import './Login/Login.css';
 import './Register/register.css';
-import './forgotpassword/forgotpassword.css';
+import './Forgotpassword/forgotpassword.css';
 
 
 function App() {
@@ -35,13 +34,14 @@ function App() {
           <Route path='/login' element={<Login />}></Route>
           <Route path='/register' element={<Register />}></Route>
           <Route path='/forgotpassword' element= {<ForgotPassword />}></Route>
-          <Route path="/product/:productName" element={<ProductDetail />} />
+
           <Route path="/about-us" element={<AboutUs />} />
         </Routes>
       </div>
     </Router>
   );
 }
+
 
 
 export default App;
