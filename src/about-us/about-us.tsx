@@ -6,13 +6,13 @@ import { Link } from 'react-router-dom';
 
 function AboutUs() {
   return (
-<div className="container">
+    <div className="container">
       <div className="sidebar">
         <ul className="menu">
-          <li className="menu-item"><Link to="/dashboard">Home</Link></li>
-          <li className="menu-item"><Link to="/juice">Juice</Link></li>
-          <li className="menu-item"><Link to="/vape">Vape</Link></li>
-          <li className="menu-item"><Link to="/about-us">About</Link></li>
+          <Link to="/dashboard"><li className="menu-item">Home</li></Link>
+          <Link to="/juice"><li className="menu-item">Juice</li></Link>
+          <Link to="/vape"><li className="menu-item">Vape</li></Link>
+          <Link to="/about-us"><li className="menu-item">About us</li></Link>
         </ul>
       </div>
 
@@ -30,14 +30,14 @@ function AboutUs() {
           </div>
 
           <div className="user-box">
-          <Link to="/login"><button className="button">Login </button></Link>
+            <Link to="/login"><button className="button">Login </button></Link>
           </div>
         </header>
 
         <div>
-      <Body />
-      <Footer />
-    </div>
+          <Body />
+          <Footer />
+        </div>
       </div>
     </div>
 
