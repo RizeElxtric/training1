@@ -1,21 +1,41 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
+const products = [
+  {
+    id: 1,
+    name: 'Juice 1',
+    image: '/juice1.jpg',
+    description: 'Description of Product 1',
+  },
+  {
+    id: 2,
+    name: 'Juice 2',
+    image: '/juice2.jpg',
+    description: 'Description of Product 2',
+  },
+  {
+    id: 3,
+    name: 'Juice 3',
+    image: '/juice3.jpg',
+    description: 'Description of Product 3',
+  },
+];
 const Juice = () => {
   return (
     <div className="container">
-
       <div className="sidebar">
         <ul className="menu">
           <li className="menu-item"><Link to="/dashboard">Home</Link></li>
           <li className="menu-item"><Link to="/juice">Juice</Link></li>
           <li className="menu-item"><Link to="/vape">Vape</Link></li>
-          <li className="menu-item"><Link to="/about-us">About us</Link></li>
+          <li className="menu-item"><Link to="/about-us">About</Link></li>
         </ul>
       </div>
 
       <div className="content">
         <header className="header">
-          <img src="logo.png" alt="Logo" className="logo" />
+          <img src="/logo.png" alt="Logo" className="logo" />
 
           <div className="search-box">
             <input type="text" placeholder="Search" className="search" />
@@ -27,35 +47,22 @@ const Juice = () => {
           </div>
 
           <div className="user-box">
-            <button className="button"><Link to="/login">Login</Link></button>
+          <Link to="/login"><button className="button">Login</button></Link>
           </div>
-
         </header>
 
-        <div className="juice-grid">
-
-          <div className="juice">
-            <img src="juice1.jpg" alt="Juice 1" />
-            <h3>juice 1</h3>
-            <p>Description of juice 1</p>
+      <div className="product-grid">
+        {products.map((product) => (
+          <div className="product" key={product.id}>
+            <img src={product.image} alt={product.name} />
+            <Link to={`/product/${product.name}`}>
+              <h3>{product.name}</h3>
+            </Link>
+            <p>{product.description}</p>
             <button>Add to Cart</button>
           </div>
-
-          <div className="juice">
-            <img src="juice2.jpg" alt="Juice 2" />
-            <h3>juice 2</h3>
-            <p>Description of juice 2</p>
-            <button>Add to Cart</button>
-          </div>
-
-          <div className="juice">
-            <img src="juice3.jpg" alt="Juice 3" />
-            <h3>juice 3</h3>
-            <p>Description of juice 3</p>
-            <button>Add to Cart</button>
-          </div>
-
-        </div>
+        ))}
+      </div>
       </div>
     </div>
   );

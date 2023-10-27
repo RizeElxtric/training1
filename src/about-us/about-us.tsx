@@ -12,7 +12,7 @@ function AboutUs() {
           <li className="menu-item"><Link to="/dashboard">Home</Link></li>
           <li className="menu-item"><Link to="/juice">Juice</Link></li>
           <li className="menu-item"><Link to="/vape">Vape</Link></li>
-          <li className="menu-item"><Link to="/about-us">About us</Link></li>
+          <li className="menu-item"><Link to="/about-us">About</Link></li>
         </ul>
       </div>
 
@@ -30,7 +30,7 @@ function AboutUs() {
           </div>
 
           <div className="user-box">
-            <button className="button">Login</button>
+          <Link to="/login"><button className="button">Login</button></Link>
           </div>
         </header>
 

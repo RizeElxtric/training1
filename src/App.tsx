@@ -14,7 +14,8 @@ import ShoppingCart from './cart/shoppingCart';
 import './App.css';
 import ForgotPassword from './forgotpassword/forgotpassword';
 import './about-us/about-us.css'
-
+import './cart/shoppingCart.css'
+import './cart/checkout.css'
 import './Login/Login.css';
 import './Register/register.css';
 import './Forgotpassword/forgotpassword.css';
