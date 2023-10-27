@@ -11,9 +11,11 @@ import Login from './Login/Login';
 import Register from './Register/register';
 import Cart from './cart/shoppingCart'
 import ProductDetail from './product-detail/product-detail';
+import './App.css';
 import ForgotPassword from './forgotpassword/forgotpassword';
 import './about-us/about-us.css'
-
+import './cart/shoppingCart.css'
+import './cart/checkout.css'
 import './Login/Login.css';
 import './Register/register.css';
 import './forgotpassword/forgotpassword.css';
@@ -39,6 +41,4 @@ function App() {
     </Router>
   );
 }
-
-
 export default App;

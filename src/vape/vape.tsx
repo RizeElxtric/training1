@@ -26,10 +26,10 @@ const Vape = () => {
     <div className="container">
       <div className="sidebar">
         <ul className="menu">
-          <li className="menu-item"><Link to="/dashboard">Home</Link></li>
-          <li className="menu-item"><Link to="/juice">Juice</Link></li>
-          <li className="menu-item"><Link to="/vape">Vape</Link></li>
-          <li className="menu-item"><Link to="/about-us">About</Link></li>
+          <Link to="/dashboard"><li className="menu-item">Home</li></Link>
+          <Link to="/juice"><li className="menu-item">Juice</li></Link>
+          <Link to="/vape"><li className="menu-item">Vape</li></Link>
+          <Link to="/about-us"><li className="menu-item">About us</li></Link>
         </ul>
       </div>
 
@@ -47,22 +47,22 @@ const Vape = () => {
           </div>
 
           <div className="user-box">
-          <Link to="/login"><button className="button">Login</button></Link>
+            <Link to="/login"><button className="button">Login</button></Link>
           </div>
         </header>
 
         <div className="product-grid">
-        {products.map((product) => (
-          <div className="product" key={product.id}>
-            <img src={product.image} alt={product.name} />
-            <Link to={`/product/${product.name}`}>
-              <h3>{product.name}</h3>
-            </Link>
-            <p>{product.description}</p>
-            <button>Add to Cart</button>
-          </div>
-        ))}
-      </div>
+          {products.map((product) => (
+            <div className="product" key={product.id}>
+              <img src={product.image} alt={product.name} />
+              <Link to={`/product/${product.name}`}>
+                <h3>{product.name}</h3>
+              </Link>
+              <p>{product.description}</p>
+              <button>Add to Cart</button>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
