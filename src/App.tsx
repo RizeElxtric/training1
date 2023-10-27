@@ -18,7 +18,7 @@ import './cart/shoppingCart.css'
 import './cart/checkout.css'
 import './Login/Login.css';
 import './Register/register.css';
-import './Forgotpassword/forgotpassword.css';
+import './forgotpassword/forgotpassword.css';
 
 
 function App() {
