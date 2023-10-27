@@ -9,8 +9,10 @@ import Vape from './vape/vape';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './Login/Login';
 import Register from './Register/register';
-
-import ForgotPassword from './Forgotpassword/forgotpassword';
+import Checkout from './cart/checkout';
+import ShoppingCart from './cart/shoppingCart';
+import './App.css';
+import ForgotPassword from './forgotpassword/forgotpassword';
 import './about-us/about-us.css'
 
 import './Login/Login.css';
@@ -38,6 +40,7 @@ function App() {
     </Router>
   );
 }
+
 
 
 export default App;
