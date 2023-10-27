@@ -30,7 +30,7 @@ function AboutUs() {
           </div>
 
           <div className="user-box">
-          <Link to="/login"><button className="button">Login</button></Link>
+          <Link to="/login"><button className="button">Login </button></Link>
           </div>
         </header>
 
