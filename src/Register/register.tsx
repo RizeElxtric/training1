@@ -18,7 +18,7 @@ const Register: React.FC = () => {
     } else if (password !== reenterPassword) {
       setError('Passwords do not match');
     } else {
-      navigate('/dashboard');
+      navigate('/login');
     }
   };
 

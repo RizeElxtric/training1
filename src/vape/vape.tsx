@@ -59,7 +59,6 @@ const Vape = () => {
                 <h3>{product.name}</h3>
               </Link>
               <p>{product.description}</p>
-              <button>Add to Cart</button>
             </div>
           ))}
         </div>
