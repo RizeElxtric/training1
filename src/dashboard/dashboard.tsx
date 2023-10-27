@@ -16,7 +16,6 @@ const Dashboard = () => {
       <div className="content">
         <header className="header">
           <img src="logo.png" alt="Logo" className="logo" />
-
           <div className="search-box">
             <input type="text" placeholder="Search" className="search" />
             <button className="button">Search</button>
@@ -27,7 +26,7 @@ const Dashboard = () => {
           </div>
 
           <div className="user-box">
-            <button className="button"><Link to="/login"></Link></button>
+          <Link to="/login"><button className="button">Login</button></Link>
           </div>
         </header>
 
@@ -40,14 +39,14 @@ const Dashboard = () => {
           </div>
 
           <div className="product">
-            <img src="product2.png" alt="Product 2" />
+            <img src="juice2.jpg" alt="Product 2" />
             <h3>Product 2</h3>
             <p>Description of Product 2</p>
             <button>Add to Cart</button>
           </div>
 
           <div className="product">
-            <img src="product3.png" alt="Product 3" />
+            <img src="juice3.jpg" alt="Product 3" />
             <h3>Product 3</h3>
             <p>Description of Product 3</p>
             <button>Add to Cart</button>
