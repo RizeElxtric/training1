@@ -10,7 +10,6 @@ const Login: React.FC = () => {
 
   const handleLogin = () => {
     if (username === 'user123456' && password === '123456') {
-      // Successful login, navigate to the dashboard
       navigate('/dashboard');
     } else {
       setError('Invalid username or password');

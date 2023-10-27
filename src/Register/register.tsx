@@ -18,8 +18,6 @@ const Register: React.FC = () => {
     } else if (password !== reenterPassword) {
       setError('Passwords do not match');
     } else {
-      // Implement registration logic
-      // You can navigate to the dashboard or login page upon successful registration
       navigate('/dashboard');
     }
   };
