@@ -1,6 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-const Dashboard = () => {
+
+const products = [
+  {
+    id: 1,
+    name: 'Vape 1',
+    image: 'vape-device1.jpg',
+    description: 'Description of Product 1',
+  },
+  {
+    id: 2,
+    name: 'Vape 2',
+    image: 'vape-device2.jpg',
+    description: 'Description of Product 2',
+  },
+  {
+    id: 3,
+    name: 'Vape 3',
+    image: 'vape-device3.jpg',
+    description: 'Description of Product 3',
+  },
+];
+const Vape = () => {
   return (
     <div className="container">
       <div className="sidebar">
@@ -8,7 +29,7 @@ const Dashboard = () => {
           <li className="menu-item"><Link to="/dashboard">Home</Link></li>
           <li className="menu-item"><Link to="/juice">Juice</Link></li>
           <li className="menu-item"><Link to="/vape">Vape</Link></li>
-          <li className="menu-item">About</li>
+          <li className="menu-item"><Link to="/about-us">About</Link></li>
         </ul>
       </div>
 
@@ -31,30 +52,20 @@ const Dashboard = () => {
         </header>
 
         <div className="product-grid">
-          <div className="product">
-            <img src="vape-device1.jpg" alt="Device 1" />
-            <h3>Vape 1</h3>
-            <p>Description of Product 1</p>
+        {products.map((product) => (
+          <div className="product" key={product.id}>
+            <img src={product.image} alt={product.name} />
+            <Link to={`/product/${product.name}`}>
+              <h3>{product.name}</h3>
+            </Link>
+            <p>{product.description}</p>
             <button>Add to Cart</button>
           </div>
-
-          <div className="product">
-            <img src="vape-device2.jpg" alt="Device 2" />
-            <h3>Vape 2</h3>
-            <p>Description of Product 2</p>
-            <button>Add to Cart</button>
-          </div>
-
-          <div className="product">
-            <img src="vape-device3.jpg" alt="Device 3" />
-            <h3>Vape 3</h3>
-            <p>Description of Product 3</p>
-            <button>Add to Cart</button>
-          </div>
-        </div>
+        ))}
+      </div>
       </div>
     </div>
   );
 };
 
-export default Dashboard;
+export default Vape;

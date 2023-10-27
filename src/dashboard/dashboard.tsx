@@ -1,6 +1,45 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+const products = [
+  {
+    id: 1,
+    name: 'Vape 1',
+    image: 'vape-device1.jpg',
+    description: 'Description of Product 1',
+  },
+  {
+    id: 2,
+    name: 'Vape 2',
+    image: 'vape-device2.jpg',
+    description: 'Description of Product 2',
+  },
+  {
+    id: 3,
+    name: 'Vape 3',
+    image: 'vape-device3.jpg',
+    description: 'Description of Product 3',
+  },
+  {
+    id: 4,
+    name: 'Juice 1',
+    image: 'juice1.jpg',
+    description: 'Description of Juice Product 1',
+  },
+  {
+    id: 5,
+    name: 'Juice 2',
+    image: 'juice2.jpg',
+    description: 'Description of Juice Product 2',
+  },
+  {
+    id: 6,
+    name: 'Juice 3',
+    image: 'juice3.jpg',
+    description: 'Description of Juice Product 3',
+  },
+];
+
 const Dashboard = () => {
   return (
     <div className="container">
@@ -9,7 +48,7 @@ const Dashboard = () => {
           <li className="menu-item"><Link to="/dashboard">Home</Link></li>
           <li className="menu-item"><Link to="/juice">Juice</Link></li>
           <li className="menu-item"><Link to="/vape">Vape</Link></li>
-          <li className="menu-item"><Link to="/about-us">About us</Link></li>
+          <li className="menu-item"><Link to="/about-us">About</Link></li>
         </ul>
       </div>
 
@@ -27,31 +66,21 @@ const Dashboard = () => {
           </div>
 
           <div className="user-box">
-            <button className="button"><Link to="/login"></Link></button>
+            <button className="button"><Link to="/login">Login</Link></button>
           </div>
         </header>
 
         <div className="product-grid">
-          <div className="product">
-            <img src="juice1.jpg" alt="Product 1" />
-            <h3>Product 1</h3>
-            <p>Description of Product 1</p>
-            <button>Add to Cart</button>
-          </div>
-
-          <div className="product">
-            <img src="product2.png" alt="Product 2" />
-            <h3>Product 2</h3>
-            <p>Description of Product 2</p>
-            <button>Add to Cart</button>
-          </div>
-
-          <div className="product">
-            <img src="product3.png" alt="Product 3" />
-            <h3>Product 3</h3>
-            <p>Description of Product 3</p>
-            <button>Add to Cart</button>
-          </div>
+          {products.map((product) => (
+            <div className="product" key={product.id}>
+              <img src={product.image} alt={product.name} />
+              <Link to={`/product/${product.name}`}>
+                <h3>{product.name}</h3>
+              </Link>
+              <p>{product.description}</p>
+                <button>Add to Cart</button>
+            </div>
+          ))}
         </div>
       </div>
     </div>
